@@ -204,7 +204,6 @@ public class CityFragment extends Fragment {
                         txt_description.setText(new StringBuilder("Weather in ")
                                 .append(weatherResult.getName()).toString());
                         txt_temperature.setText(new StringBuilder(String.valueOf(weatherResult.getMain().getTemp())).append("°C").toString());
-                        txt_date_time.setText(Common.convertUnixToDate(weatherResult.getDt()));
                         txt_pressure.setText(new StringBuilder(String.valueOf(weatherResult.getMain().getPressure())).append(" hpa").toString());
                         txt_humidity.setText(new StringBuilder(String.valueOf(weatherResult.getMain().getHumidity())).append("%").toString());
                         txt_sunrise.setText(Common.convertUnixToHour(weatherResult.getSys().getSunrise()));
