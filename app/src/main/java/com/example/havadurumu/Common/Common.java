@@ -14,7 +14,7 @@ public class Common {
     public static String convertUnixToDate(long dt) {
         Date date = new Date(dt*1000L);
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm dd EEE MM yyyy");
-        sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
+        sdf.setTimeZone(TimeZone.getTimeZone("GMT+3"));
         String formatted = sdf.format(date);
         return formatted;
     }
@@ -22,6 +22,7 @@ public class Common {
     public static String convertUnixToHour(long dt) {
         Date date = new Date(dt*1000L);
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+        sdf.setTimeZone(TimeZone.getTimeZone("GMT+3"));
         String formatted = sdf.format(date);
         return formatted;
     }
